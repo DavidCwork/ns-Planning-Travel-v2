@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register';
 import { LoginComponent } from './components/login/login';
 import { HotelsModule } from './components/hotels/hotels.module';
+import { AccountComponent } from './components/account/account'
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -18,6 +19,7 @@ import { HotelsModule } from './components/hotels/hotels.module';
     AppComponent,
     RegisterComponent,
     LoginComponent,
+    AccountComponent
   ],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],

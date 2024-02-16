@@ -1,25 +1,25 @@
 <ScrollView>
     <StackLayout class="main">
         <FlexboxLayout class="header">
-            <Label class="fas header__icon" text="&#xf053;"></Label>
+            <Label (tap)="onLogin()" class="fas header__icon" text="&#xf053;"></Label>
             <Label class="header__title" text="Hospedajes"></Label>
         </FlexboxLayout>
-        <FlexboxLayout class="search">
-            <TextField hint="Buscar"></TextField>
-            <Label class="fas" text="&#xf002;"></Label>
-        </FlexboxLayout>
+        <GridLayout rows="auto, auto" columns="*, auto" class="search">
+            <TextField row="0" colSpan="2" hint="Buscar"></TextField>
+            <Label row="0" col="1" class="fas search-icon" text="&#xf002;"></Label>
+        </GridLayout>
         <FlexboxLayout class="nav">
-            <FlexboxLayout>
+            <FlexboxLayout class="nav-item">
                 <Label class="fas" text="&#xf0b0;"></Label>
-                <Label text="Filtros"></Label>
+                <Label text=" Filtros"></Label>
             </FlexboxLayout>
-            <FlexboxLayout>
+            <FlexboxLayout class="nav-item">
                 <Label class="fas" text="&#xf884;"></Label>
-                <Label text="Ordenar"></Label>
+                <Label text=" Ordenar"></Label>
             </FlexboxLayout>
-            <FlexboxLayout>
-                <Label></Label>
-                <Label text="Mapa"></Label>
+            <FlexboxLayout class="nav-item">
+                <Label class="fas" text="&#xf3c5;"></Label>
+                <Label text=" Mapa"></Label>
             </FlexboxLayout>
         </FlexboxLayout>
         <FlexboxLayout class="hotels">

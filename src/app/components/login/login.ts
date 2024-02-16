@@ -34,4 +34,8 @@ export class LoginComponent implements OnInit {
   public textFieldLoaded(args){
     this.passwordField = args.object;
   }
+
+  public onHotels(): void {
+    this.router.navigate(['hotels']);
+  }
 }

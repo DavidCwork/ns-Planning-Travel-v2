@@ -10,7 +10,7 @@
             text="{{hotelName}}"
         ></Label>
         <Label
-            text="$ {{hotelPrice}}"
+            text="{{hotelPrice | currency: ''}}"
         ></Label>
     </FlexboxLayout>
     <FlexboxLayout
@@ -21,7 +21,7 @@
         >
             <Label
             class="fas rating"
-            text="&#xf005; {{hotelRating}}.0"
+            text="&#xf005; {{hotelRating | number: '.1'}}"
         ></Label>
         <Label
             text="(3.000 opiniones)"

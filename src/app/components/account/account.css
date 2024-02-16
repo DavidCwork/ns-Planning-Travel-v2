@@ -1,0 +1,27 @@
+.main {
+	flex-direction: column;
+	padding: 20;
+	background-color: #F3F5F6;
+}
+
+.header {
+	flex-direction: row;
+	font-family: 'Poppins';
+	font-weight: normal;
+}
+
+.header__icon {
+	font-size: 16;
+	font-weight: normal;
+	background-color: white;
+	border-radius: 50;
+	width: 30;
+	height: 30;
+	text-align: center;
+	margin: 0 30 0 0;
+}
+
+.header__title {
+	font-weight: bold;
+	font-size: 22;
+}

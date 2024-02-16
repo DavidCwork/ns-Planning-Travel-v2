@@ -5,6 +5,7 @@
 .header {
     color: #FF5C5C;
     align-items: center;
+    margin: 0 0 20 0;
 }
 
 .header__icon {
@@ -13,24 +14,42 @@
 }
 
 .header__title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: medium;
+    font-family: 'Poppins';
+    font-weight: bold;
     font-size: 26;
 }
 
 .search {
     justify-content: space-between;
-    padding: 0 2 0 2;
+    padding: 0 10 0 0;
+    background-color: #FAFAFF;
+    margin: 0 0 20 0;
+    border-radius: 10;
 }
 
 .search TextField {
     border-width: 0;
+    font-weight: bold;
+    color: #172B4D;
+    placeholder-color: #172b4d84;
+}
+
+.search .search-icon {
+    color: #FF5C5C;
+    font-size: 20;
 }
 
 .nav {
     color: #FF5C5C;
     justify-content: space-between;
     padding: 0 2 0 2;
+    margin: 0 0 20 0;
+}
+
+.nav-item {
+    background-color: #FAFAFF;
+    padding: 8 10 8 10;
+    border-radius: 10;
 }
 
 .hotels {

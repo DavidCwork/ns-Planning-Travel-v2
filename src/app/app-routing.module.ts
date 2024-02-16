@@ -4,12 +4,14 @@ import { NativeScriptRouterModule } from '@nativescript/angular'
 
 import { LoginComponent } from './components/login/login';
 import { RegisterComponent } from './components/register/register';
+import { AccountComponent } from './components/account/account';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'hotels', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'hotels', loadChildren: () => import('./components/hotels/hotels.module').then((m) => m.HotelsModule) },
+  { path: 'account', component: AccountComponent },
 ]
 
 @NgModule({

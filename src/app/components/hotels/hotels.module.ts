@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { Routes } from '@angular/router';
 
@@ -20,6 +20,7 @@ const routes: Routes = [
     CardHotelComponent
   ],
   providers: [],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class HotelsModule { }
 

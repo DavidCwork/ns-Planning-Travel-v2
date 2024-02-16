@@ -12,13 +12,14 @@
 .card__content {
     justify-content: space-between;
     padding: 10;
-    font-size: 16;
+    font-size: 18;
     font-weight: bold;
 }
 
 .card__footer {
     justify-content: space-between;
     padding: 10;
+    color: #7A869A;
 }
 
 .card__footer__rating {
