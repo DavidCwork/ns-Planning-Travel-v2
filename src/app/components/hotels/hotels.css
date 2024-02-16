@@ -1,0 +1,38 @@
+.main {
+    padding: 40 20 0 20;
+}
+
+.header {
+    color: #FF5C5C;
+    align-items: center;
+}
+
+.header__icon {
+    font-size: 20;
+    margin-right: 100;
+}
+
+.header__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+    font-size: 26;
+}
+
+.search {
+    justify-content: space-between;
+    padding: 0 2 0 2;
+}
+
+.search TextField {
+    border-width: 0;
+}
+
+.nav {
+    color: #FF5C5C;
+    justify-content: space-between;
+    padding: 0 2 0 2;
+}
+
+.hotels {
+    flex-direction: column;
+}

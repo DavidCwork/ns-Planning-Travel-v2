@@ -1,0 +1,77 @@
+<ScrollView>
+    <StackLayout id="main">
+        <FlexboxLayout id="header">
+			<Label margin="10 0 10 20" id="title" text="Registrarse"></Label>
+			<FlexboxLayout class="container-btns">
+				<Button class="fab btn" id="btn-google" text="&#xf1a0; Google" pageTransition="slide" clearHistory="true"></Button>
+				<Button class="fab btn" id="btn-facebook" text="&#xf09a; Facebook" pageTransition="slide" clearHistory="true"></Button>
+			</FlexboxLayout>
+			<Label text="O"></Label>
+		</FlexboxLayout>
+		<FlexboxLayout id="form">
+			<TextField required hint="Nombre y Apellidos"></TextField>
+			<TextField required hint="Correo Electronico"></TextField>
+			<GridLayout rows="auto, auto" columns="*, auto" class="input-password">
+				<TextField
+					row="0"
+					secure="true"
+					colSpan="2"
+					required
+					hint="Contraseña"
+					(loaded)="textFieldLoaded($event, 'password')"
+					#passwordField
+				></TextField>
+				<Label
+					(tap)="togglePasswordVisibility('password')"
+					class="fas"
+					row="0"
+					col="1"
+					text="&#xf06e;"
+					[visibility]="showPasswordIcon ? 'visible' : 'collapse'"
+				></Label>
+				<Label
+					(tap)="togglePasswordVisibility('password')"
+					class="fas"
+					row="0"
+					col="1"
+					text="&#xf070;"
+					[visibility]="!showPasswordIcon ? 'visible' : 'collapse'"
+				></Label>
+			</GridLayout>
+			<GridLayout rows="auto, auto" columns="*, auto" class="input-password">
+				<TextField
+					row="0"
+					secure="true"
+					colSpan="2"
+					required
+					hint="Confirmar contraseña"
+					(loaded)="textFieldLoaded($event, 'confirmPassword')"
+					#confirmPasswordField
+				></TextField>
+				<Label
+					#passwordField
+					(tap)="togglePasswordVisibility('confirmPassword')"
+					class="fas"
+					row="0"
+					col="1"
+					text="&#xf06e;"
+					[visibility]="showConfirmPasswordIcon ? 'visible' : 'collapse'"
+				></Label>
+				<Label
+					#passwordField
+					(tap)="togglePasswordVisibility('confirmPassword')"
+					class="fas"
+					row="0"
+					col="1"
+					text="&#xf070;"
+					[visibility]="!showConfirmPasswordIcon ? 'visible' : 'collapse'"
+				></Label>
+			</GridLayout>
+			<Button class="btn-register" text="Registrarse"></Button>
+		</FlexboxLayout>
+		<FlexboxLayout id="footer">
+			<Label text="¿Ya tienes una cuenta?"></Label>
+			<Label class="text-link" text="Iniciar Sesión" (tap)="onLogin()"></Label>
+		</FlexboxLayout>
+    </StackLayout>
+</ScrollView>

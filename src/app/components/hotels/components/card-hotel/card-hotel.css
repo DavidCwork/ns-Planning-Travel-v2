@@ -1,0 +1,35 @@
+.card {
+    flex-direction: column;
+    border-radius: 10;
+    height: fit-content;
+    margin: 10 0 10 0;
+}
+
+.card__image {
+    border-radius: 10;
+}
+
+.card__content {
+    justify-content: space-between;
+    padding: 10;
+    font-size: 16;
+    font-weight: bold;
+}
+
+.card__footer {
+    justify-content: space-between;
+    padding: 10;
+}
+
+.card__footer__rating {
+    justify-content: space-between;
+    color: #7A869A;
+}
+
+.rating {
+    align-items: center;
+    background-color: #FF5C5C;
+    color: white;
+    border-radius: 5;
+    margin: 0 10 0 0;
+}

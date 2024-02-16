@@ -1,0 +1,26 @@
+<ScrollView>
+	<StackLayout id="main">
+		<FlexboxLayout id="header">
+			<Label id="title" text="Iniciar Sesión" margin="10 0 10 20"></Label>
+			<FlexboxLayout margin="10 0 10 0" class="container-btns">
+				<Button class="fab btn" id="btn-google" text="&#xf1a0; Google" pageTransition="slide" clearHistory="true"></Button>
+				<Button class="fab btn" id="btn-facebook" text="&#xf09a; Facebook" pageTransition="slide" clearHistory="true"></Button>
+			</FlexboxLayout>
+			<Label text="O" height="70"></Label>
+		</FlexboxLayout>
+		<FlexboxLayout id="form">
+			<TextField required hint="Correo Electronico"></TextField>
+			<GridLayout rows="auto, auto" columns="*, auto" class="input-password">
+				<TextField #passwordField row="0" secure="true" colSpan="2" required hint="Contraseña" (loaded)="textFieldLoaded($event)"></TextField>
+				<Label (tap)="togglePasswordVisibility()" class="fas" row="0" col="1" text="&#xf06e;"></Label>
+			</GridLayout>
+			<!-- <TextField required hint="Contraseña"></TextField> -->
+			<Label id="link-password" text="¿Olvidaste tu contraseña?"></Label>
+			<Button class="btn-login" text="Iniciar sesión"></Button>
+		</FlexboxLayout>
+		<FlexboxLayout id="footer">
+			<Label text="¿No tienes una cuenta?"></Label>
+			<Label class="text-link" text="Registrarse" (tap)="onRegister()"></Label>
+		</FlexboxLayout>
+	</StackLayout>
+</ScrollView>

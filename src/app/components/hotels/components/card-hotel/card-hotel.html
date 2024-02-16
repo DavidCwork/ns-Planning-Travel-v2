@@ -1,0 +1,34 @@
+<FlexboxLayout class="card">
+    <Image
+        class="card__image"
+        src="{{hotelImg}}"
+    ></Image>
+    <FlexboxLayout
+        class="card__content"
+    >
+        <Label
+            text="{{hotelName}}"
+        ></Label>
+        <Label
+            text="$ {{hotelPrice}}"
+        ></Label>
+    </FlexboxLayout>
+    <FlexboxLayout
+        class="card__footer"
+    >
+        <FlexboxLayout
+            class="card__footer__rating"
+        >
+            <Label
+            class="fas rating"
+            text="&#xf005; {{hotelRating}}.0"
+        ></Label>
+        <Label
+            text="(3.000 opiniones)"
+        ></Label>
+        </FlexboxLayout>
+        <Label
+            text="Por una estadia de 3 noches"
+        ></Label>
+    </FlexboxLayout>
+</FlexboxLayout>

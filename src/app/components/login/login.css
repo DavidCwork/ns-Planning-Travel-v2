@@ -1,0 +1,93 @@
+#main {
+	background-color: #F3F5F6;
+	padding: 10px;
+}
+
+#header {
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 60;
+}
+
+#title {
+	align-self: flex-start;
+	font-family: 'Poppins', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.btn {
+	border-radius: 15px;
+	padding: 0 25 0 25;
+	font-weight: medium;
+	font-size: 16;
+}
+
+.container-btns {
+	justify-content: center;
+}
+
+#btn-google {
+	color: black;
+}
+
+#btn-facebook {
+	background-color: #1746A5;
+	color: white;
+}
+
+#form {
+	flex-direction: column;
+	padding: 20;
+}
+
+TextField {
+	border-width: 1px;
+	border-radius: 10;
+	padding: 16 10 16 10;
+	background-color: white;
+	placeholder-color: #B3B2B2;
+}
+
+.input-password {
+	border-width: 1px;
+	border-color: #B3B2B2;
+	border-radius: 10;
+	background-color: white;
+	margin: 0 15 0 15;
+}
+
+.input-password TextField {
+	background-color: none;
+	border-width: 0;
+	padding: 10 0 10 0;
+}
+
+.input-password Label {
+	padding: 0 10 0 0;
+}
+
+#link-password {
+	color: #FF5C5C;
+	align-self: flex-end;
+	padding-right: 15;
+}
+
+.btn-login {
+	color: white;
+	background-color: #386363;
+	border-radius: 15;
+}
+
+#footer {
+	margin-top: 200px;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text-link {
+	color: #FF5C5C;
+	font-size: 18px;
+}

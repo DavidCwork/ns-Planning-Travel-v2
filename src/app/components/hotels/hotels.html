@@ -1,0 +1,35 @@
+<ScrollView>
+    <StackLayout class="main">
+        <FlexboxLayout class="header">
+            <Label class="fas header__icon" text="&#xf053;"></Label>
+            <Label class="header__title" text="Hospedajes"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout class="search">
+            <TextField hint="Buscar"></TextField>
+            <Label class="fas" text="&#xf002;"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout class="nav">
+            <FlexboxLayout>
+                <Label class="fas" text="&#xf0b0;"></Label>
+                <Label text="Filtros"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout>
+                <Label class="fas" text="&#xf884;"></Label>
+                <Label text="Ordenar"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout>
+                <Label></Label>
+                <Label text="Mapa"></Label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+        <FlexboxLayout class="hotels">
+            <card-hotel
+                *ngFor="let hotel of hotels"
+                [hotelImg]="hotel.img"
+                [hotelName]="hotel.name"
+                [hotelPrice]="hotel.price"
+                [hotelRating]="hotel.rating"
+            ></card-hotel>
+        </FlexboxLayout>
+    </StackLayout>
+</ScrollView>
