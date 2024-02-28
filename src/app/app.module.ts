@@ -7,6 +7,9 @@ import { RegisterComponent } from './components/register/register';
 import { LoginComponent } from './components/login/login';
 import { HotelsModule } from './components/hotels/hotels.module';
 import { AccountComponent } from './components/account/account'
+import { EditAccountComponent } from './components/edit-account/edit-account';
+import { HomeComponent } from './components/home/home';
+import { DetailsComponent } from './components/details/details';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -19,7 +22,10 @@ import { AccountComponent } from './components/account/account'
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    EditAccountComponent,
+    HomeComponent,
+    DetailsComponent
   ],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],

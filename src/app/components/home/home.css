@@ -1,0 +1,147 @@
+#main{
+    margin: 60px;
+}
+#nav{
+    justify-content: center;
+}
+#nav-2{
+    justify-content: space-between;
+    padding: 60px;
+}
+#btn-1{
+    color: aliceblue;
+    background-color: #FF5C5C;
+    font-size: 20px;
+    padding: left 14px right 14px;
+    border-radius: 40px;
+    width: fit-content;
+}
+#btn-2{
+    font-size: 20px;
+    color: #386363;
+    margin: 43px;
+}
+#btn-3{
+    font-size: 20px;
+    margin: 43px;
+    color: #386363;
+}
+#btn-4{
+    font-size: 20px;
+    margin: 43px;
+    color: #386363;
+}
+#btn-5{
+    font-size: 20px;
+    color: #FF5C5C;
+}#btn-6{
+    font-size: 20px;
+    color: #FF5C5C;
+}
+#pregunta{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px;
+}
+#contenedor{
+    flex-direction: column;
+}
+#busqueda-t{
+    font-size: 15px;
+    placeholder-color: #A5A7AC;
+    border-bottom-width: 0;
+    font-weight: medium;
+}
+#busqueda{
+    background: #F4F4F5;
+    border-radius: 100%;
+    height: 51;
+    justify-content: space-between;
+    padding: 7 7 7 25;
+}
+#busqueda-i{
+    color: aliceblue;
+    background-color: #FF5C5C;
+    border-radius: 50%;
+    font-size: 20;
+    height: 38;
+    text-align: center;
+    padding: 8;
+}
+#ciudades{
+    justify-content: space-around;
+    margin: 40px;
+    font-size: medium;
+}
+.ciudad{
+    color: #A5A7AC;
+}
+
+#Hospedaje{
+    font-size: 20px;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.image-scroll {
+    position: relative;
+}
+.image-text-cont{
+    left: 50;
+    top: 200;
+}
+.image-t{
+    flex-direction: column;
+}
+.image-text {
+    position: absolute;
+    color: #F4F4F5;
+    font-weight: bold;
+    font-size: 16px;
+}
+.image-text2{
+    font-size: 16px;
+    color: #F4F4F5;
+}
+#image-icon{
+    color: #FF5C5C;;
+    background-color: #F4F4F5;
+    border-radius: 100%;
+    font-size: 20px;
+    padding-left: 16;
+    padding-right: 16;
+    margin-left: 40px;
+}
+#contenedor_hos{
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.hos{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.imagen{
+    height: 700px;
+    margin: 20px;
+    border-radius: 40%;
+}
+.imagen_hos{
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+}
+.text_hos{
+    font-size: medium;
+    color: #A5A7AC;
+    font-weight: semibold;
+
+}
+
+#active {
+    color: #FF5C5C;
+    border-bottom-width: 10px;
+    border-bottom-color: #FF5C5C;
+}

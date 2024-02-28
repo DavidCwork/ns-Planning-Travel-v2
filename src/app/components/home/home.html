@@ -1,0 +1,103 @@
+<DockLayout stretchLastChild="false" id="main">
+    <StackLayout  dock="top">
+        <flexboxLayout id="nav-2">
+            <label id="btn-5" class="fas" text ='&#xf0c9;'></label>
+            <label id="btn-6" class="fas" text ='&#xf0f3;'></label>
+        </flexboxLayout>
+    </StackLayout>
+    <flexboxLayout id="nav" dock="bottom">
+        <button  class="fas" id="btn-1" text ='&#xf015; Home'></button>
+        <label  id="btn-2" class="fas" text ='&#xf14e;'></label>
+        <label  id="btn-3" class="fas" text ='&#xf0f3;'></label>
+        <label  id="btn-4" class="fas" text ='&#xf007;'></label>
+    </flexboxLayout>
+    <ScrollView>
+        <flexboxLayout id="contenedor"  >
+            <label textWrap="true" id="pregunta" text="¿Donde te quieres hospedar?">
+            </label>
+            <flexboxLayout id="busqueda">
+                <TextField id="busqueda-t" required hint="Busqueda Hospedaje"></TextField>
+                <label id="busqueda-i" class="fas" text="&#xf002;"></label>
+            </flexboxLayout>
+            <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+                <flexboxLayout id="ciudades">
+                    <label id="active" text="Medellín"></label>
+                    <label class="ciudad" text="Barranquilla"></label>
+                    <label class="ciudad" text="Cali"></label>
+                    <label class="ciudad" text="Valledupar"></label>
+                    <label class="ciudad" text="Bogotá"></label>
+                </flexboxLayout>
+            </ScrollView>
+            <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+                <flexboxLayout>
+                    <AbsoluteLayout class="image-scroll" position="relative">
+                    <Image class="imagen" src="~/app/images/hoteles.jpg"></Image>
+                        <flexboxLayout class="image-text-cont" position="absolute" >
+                            <flexboxLayout class="image-t">
+                                <label class="image-text" text="Bermudha, USA "></label>
+                                <label class="image-text2" text="Starting at $1000"></label>
+                            </flexboxLayout>
+                            <label id="image-icon" class="fas" text="&#xf004;"></label>
+                        </flexboxLayout>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout class="image-scroll" position="relative">
+                        <Image class="imagen" src="~/app/images/hoteles.jpg"></Image>
+                        <flexboxLayout class="image-text-cont" position="absolute" >
+                            <flexboxLayout class="image-t">
+                                <label class="image-text" text="Bermudha, USA "></label>
+                                <label class="image-text2" text="Starting at $1000"></label>
+                            </flexboxLayout>
+                            <label id="image-icon" class="fas" text="&#xf004;"></label>
+                        </flexboxLayout>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout class="image-scroll" position="relative">
+                        <Image class="imagen" src="~/app/images/hoteles.jpg"></Image>
+                        <flexboxLayout class="image-text-cont" position="absolute" >
+                            <flexboxLayout class="image-t">
+                                <label class="image-text" text="Bermudha, USA "></label>
+                                <label class="image-text2" text="Starting at $1000"></label>
+                            </flexboxLayout>
+                            <label id="image-icon" class="fas" text="&#xf004;"></label>
+                        </flexboxLayout>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout class="image-scroll" position="relative">
+                    <Image class="imagen" src="~/app/images/hoteles.jpg"></Image>
+                    <flexboxLayout class="image-text-cont" position="absolute" >
+                        <flexboxLayout class="image-t">
+                        <label class="image-text" text="Bermudha, USA "></label>
+                        <label class="image-text2" text="Starting at $1000"></label>
+                        </flexboxLayout>
+                        <label id="image-icon" class="fas" text="&#xf004;"></label>
+                    </flexboxLayout>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout class="image-scroll" position="relative">
+                    <Image class="imagen" src="~/app/images/hoteles.jpg"></Image>
+                    <flexboxLayout class="image-text-cont" position="absolute" >
+                        <flexboxLayout class="image-t">
+                        <label class="image-text" text="Bermudha, USA "></label>
+                        <label class="image-text2" text="Starting at $1000"></label>
+                        </flexboxLayout>
+                        <label id="image-icon" class="fas" text="&#xf004;"></label>
+                    </flexboxLayout>
+                    </AbsoluteLayout>
+                </flexboxLayout>
+            </ScrollView>
+            <label id="Hospedaje" textWrap="true"text="Hospedajes destacados">
+            </label>
+            <flexboxLayout id="contenedor_hos">
+            <flexboxLayout class="hos">
+                <Image class="imagen_hos" src="~/assets/airplane_4.png" dock="top"></Image>
+                <label class="text_hos" text="Transport" dock="bottom"></label>
+            </flexboxLayout>
+            <flexboxLayout class="hos">
+                <Image class="imagen_hos" src="~/assets/hotel-svgrepo-com.png" dock="top"></Image>
+                <label class="text_hos" text="Hotel" dock="bottom"></label>
+            </flexboxLayout>
+            <flexboxLayout class="hos">
+                <Image class="imagen_hos" src="~/assets/bus.png" dock="top"></Image>
+                <label class="text_hos" text="Events" dock="bottom"></label>
+            </flexboxLayout>
+            </flexboxLayout>
+        </flexboxLayout>
+    </ScrollView>
+</DockLayout>
