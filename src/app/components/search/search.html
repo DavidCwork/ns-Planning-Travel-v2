@@ -1,0 +1,43 @@
+
+<DockLayout stretchLastChild="true">
+    <Label text="" dock="left" width="30" backgroundColor="#FFFFFF"> </Label>
+    <Label text="" dock="top" height="40" backgroundColor="#FFFFFF"> </Label>
+    <Label text="" dock="right" width="30" backgroundColor="#FFFFFF"> </Label>
+    <Label text="" dock="bottom" height="40" backgroundColor="#FFFFFF"> </Label>
+    <StackLayout backgroundColor="#ffffff">
+        <flexboxlayout id="head">
+            <Label (tap)="onHome()" class="fas header__icon" text="&#xf053;"></Label>
+            <Label class="titulo" text="Buscar Hospedajes"> </Label>
+            <label class="fas icon_airplane" text="&#Xf1d8;"> </label>
+        </flexboxlayout>
+        <label class="subtitulo" text="Ciudad/Hotel" style="margin-top: 30px;"></label>
+        <SearchBar hint="Medellin/Colombia..." style="font-weight: bold;" />
+        <GridLayout columns="auto, 20, auto" rows="135, 115">
+            <flexboxlayout  class="columna">
+                <Label  class="text-start subtitulo"  text="Fecha inicio"></Label>
+                <button class="far boton" text="&#Xf073; jue, 12 jun"></button>
+            </flexboxlayout>
+            <flexboxlayout  row="0" col="2" class="columna">
+                <Label  class="text-start subtitulo" text="Fecha Regreso"></Label>
+                <button class="far boton" text="&#Xf073; sab,  14 jun "> </button>
+            </flexboxlayout>
+            <flexboxlayout  row="1" col="0" class="columna">
+                <Label class="text-start subtitulo"  text="Detalles"></Label>
+                <button class="far boton" text="&#xf007;   2 Adultos">   </button>
+            </flexboxlayout>
+            <flexboxlayout  row="1" col="2" class="columna">
+                <label class="text-center subtitulo"  text="Habitaciones"> </label>
+                <flexboxlayout class="botones">
+                    <button class="botonhab"> - </button> 
+                    <label text="1" style="font-weight: bold;"></label>
+                    <button class="botonhab"> + </button>
+                    
+                </flexboxlayout>
+            </flexboxlayout>  
+        </GridLayout>
+        <flexboxlayout class="buscar">
+            <button class="btn-buscar"> Buscar </button>
+        </flexboxlayout>
+    </StackLayout>
+        
+</DockLayout>

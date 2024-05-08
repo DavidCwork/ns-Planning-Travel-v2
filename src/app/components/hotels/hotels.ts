@@ -41,7 +41,13 @@ export class HotelsComponent implements OnInit {
     this.page.actionBarHidden = true;
   }
 
-  public onLogin(): void {
-    this.router.navigate(['login']);
+  public onHome(): void {
+    this.router.navigate(['home']);
+  }
+  public onSearch(): void {
+    this.router.navigate(['search']);
+  }
+  public onDetails(): void {
+    this.router.navigate(['details']);
   }
 }

@@ -13,4 +13,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void{
     this.page.actionBarHidden = true;
   }
+  public onHotel(): void {
+    this.router.navigate(['hotels']);
+  }
 }

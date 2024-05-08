@@ -1,6 +1,8 @@
 <stacklayout>
-    <Image src="~/images/paris.jpg" stretch="aspectFill" style="height: 50%;"></Image>
-    <flexboxlayout class="detalles">
+    <AbsoluteLayout position="relative">
+        <Image src="~/assets/hoteles.jpg" class="fondo" stretch="aspectFill" ></Image>
+        <Label (tap)="onHotel()" class="fas header__icon" text="&#xf060;" position="absolute"></Label>
+    <flexboxlayout  position="absolute" class="detalles">
         <flexboxlayout class="row">
             <label class="titulo" text="Paris, Francia"></label>
             <label class="precio" text="$1000"></label>
@@ -40,5 +42,5 @@
             <button class="boton"> Reservar </button>
         </flexboxlayout>
     </flexboxlayout>
-
+    </AbsoluteLayout>
 </stacklayout>

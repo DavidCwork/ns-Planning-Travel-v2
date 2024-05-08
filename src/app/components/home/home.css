@@ -15,8 +15,17 @@
     padding: left 14px right 14px;
     border-radius: 40px;
     width: fit-content;
+
 }
-#btn-2{
+#icon-home {
+	background-color: #FF5C5C;
+	color: white;
+	border-radius: 15;
+	padding: 8 16 8 16;
+	font-size: 14;
+}
+
+#icon-hotel{
     font-size: 20px;
     color: #386363;
     margin: 43px;
@@ -26,7 +35,7 @@
     margin: 43px;
     color: #386363;
 }
-#btn-4{
+#icon-account{
     font-size: 20px;
     margin: 43px;
     color: #386363;
@@ -89,6 +98,9 @@
 .image-text-cont{
     left: 50;
     top: 200;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.678);
+    border-radius: 50px;
 }
 .image-t{
     flex-direction: column;
@@ -124,24 +136,41 @@
     align-items: center;
 }
 .imagen{
-    height: 700px;
+    height: 950px;
     margin: 20px;
     border-radius: 40%;
 }
-.imagen_hos{
-    border-radius: 100%;
-    height: 200px;
-    width: 200px;
+.ver-mas{
+    font-size: 15px;
+    margin-top: 60px;
+    font-weight: bold;
 }
-.text_hos{
-    font-size: medium;
-    color: #A5A7AC;
-    font-weight: semibold;
-
-}
-
 #active {
     color: #FF5C5C;
     border-bottom-width: 10px;
     border-bottom-color: #FF5C5C;
+}
+.image-scroll-city {
+    position: relative;
+}
+.image-text-cont-city{
+    left: 30;
+    top: 100;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.678);
+    border-radius: 50px;
+}
+.image-t-city{
+    flex-direction: column;
+}
+.image-text-city {
+    position: absolute;
+    color: #F4F4F5;
+    font-weight: bold;
+    font-size: 16px;
+}
+.imagen-city{
+    height: 500px;
+    margin: 20px;
+    border-radius: 40%;
 }
