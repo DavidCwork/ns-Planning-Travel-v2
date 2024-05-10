@@ -12,7 +12,14 @@
 }
 #label2{
     margin-bottom: 60px;
-    font-weight:500;
+    margin-left:40px;
+    background:#ff5c5cbb;
+    border-radius: 12%;
+    padding-left: 260px;
+    padding: 20px;
+    color:white;
+    font-weight: bold;
+    align-items: center;
 }
 #boton1{
     background-color: #FF5C5C;
@@ -72,6 +79,9 @@ Image{
     background-color: white;
     height: 130px;
     justify-content: center;
+    height: 300px;
+    padding: 60px;
+
 }
 
 #boton4{
@@ -94,7 +104,7 @@ Image{
     background-color: #386363;
     color: white;
     margin-left: 60px;
-    width: 200px;
+    width: auto;
     height: 10px;
     padding: 8 16 8 16;
     border-radius: 50%;

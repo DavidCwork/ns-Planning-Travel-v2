@@ -1,12 +1,12 @@
 <ScrollView>
 	<StackLayout id="main">
 		<FlexboxLayout id="header">
-			<Label id="title" text="Iniciar Sesión" margin="10 0 10 20"></Label>
-			<FlexboxLayout margin="10 0 10 0" class="container-btns">
-				<Button class="fab btn" id="btn-google" text="&#xf1a0; Google" pageTransition="slide" clearHistory="true"></Button>
-				<Button class="fab btn" id="btn-facebook" text="&#xf09a; Facebook" pageTransition="slide" clearHistory="true"></Button>
+			<Label id="title" text="Iniciar Sesión" class="header-items" ></Label>
+			<FlexboxLayout class="container-btns">
+				<Button class="fab btn header-items" id="btn-google" text="&#xf1a0; Google" pageTransition="slide" clearHistory="true"></Button>
+				<Button class="fab btn header-items" id="btn-facebook" text="&#xf09a; Facebook" pageTransition="slide" clearHistory="true"></Button>
 			</FlexboxLayout>
-			<Label text="O" height="70"></Label>
+			<Label class="header-items" text="O" ></Label>
 		</FlexboxLayout>
 		<FlexboxLayout id="form">
 			<TextField required hint="Correo Electronico"></TextField>

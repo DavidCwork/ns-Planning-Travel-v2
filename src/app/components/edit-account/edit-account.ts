@@ -15,9 +15,15 @@ export class EditAccountComponent implements OnInit {
 		this.page.actionBarHidden = true;
 	}
 	public onAccount(): void {
-		this.router.navigate(['account'])
+		this.router.navigate(['account']);
 	}
 	public onHome(): void {
-		this.router.navigate(['home'])
+		this.router.navigate(['home']);
+	}
+	public onHotels(): void {
+		this.router.navigate(['hotels'])
+	}
+	public onSearch(): void {
+		this.router.navigate(['search'])
 	}
 }

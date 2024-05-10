@@ -1,9 +1,9 @@
 <DockLayout stretchLastChild="true"  backgroundColor="#F3F5F6"  >
   <FlexboxLayout dock="bottom" id="barra">
     <button  (tap)="onHome()" id="boton7" class="fas" text="&#xf015;  Home"></button>
-    <Label id="boton5" class="fas" text="&#xf14e;" ></Label>
-    <Label id="boton6" class="fas" text="&#xf0f3;" ></Label>
-    <Label id="boton4" class="fas" text="&#xf007;"></Label>
+    <Label (tap)="onHotels()" id="boton5" class="fas" text="&#xf594;" ></Label>
+    <Label (tap)="onSearch()" id="boton6" class="fas" text="&#xf002;" ></Label>
+    <Label (tap)="onAccount()" id="boton4" class="fas" text="&#xf007;"></Label>
   </FlexboxLayout>
   <FlexboxLayout id="form">
     <FlexboxLayout dock="bottom">
@@ -11,7 +11,7 @@
       <label text="Editar Perfil" class="texteditar"></label>
     </FlexboxLayout>
     <Image src="~/app/images/imagen.png" width="120" ></Image>
-    <Label  id="label2" class="texto_centrado" text="Cambiar foto de perfil"></Label>
+    <Label  id="label2" class="texto_centrado fas" text="Cambiar foto de perfil &#xf304;"></Label>
     <Label id="label1" text="Nombre" class="fas" ></Label>
     <TextField hint="Sebastián"></TextField>
     <Label id="label1" text="Ubicación"></Label>

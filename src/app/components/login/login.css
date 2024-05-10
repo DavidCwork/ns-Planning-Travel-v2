@@ -1,17 +1,18 @@
 #main {
+	padding-top: 300px;
 	background-color: #F3F5F6;
-	padding: 10px;
 }
 
 #header {
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
 	margin-top: 60;
+	justify-content: space-between;
 }
-
+.header-items {
+	margin: 40px;
+}
 #title {
-	align-self: flex-start;
 	font-family: 'Poppins', sans-serif;
 	font-size: 40px;
 	font-weight: bold;
@@ -30,11 +31,13 @@
 
 #btn-google {
 	color: black;
+	border-radius: 12;
 }
 
 #btn-facebook {
-	background-color: #1746A5;
+	background: #1746a5e1;
 	color: white;
+	border-radius: 12;
 }
 
 #form {
@@ -46,8 +49,9 @@ TextField {
 	border-width: 1px;
 	border-radius: 10;
 	padding: 16 10 16 10;
-	background-color: white;
+	background-color: white;	
 	placeholder-color: #B3B2B2;
+	
 }
 
 .input-password {
@@ -69,15 +73,18 @@ TextField {
 }
 
 #link-password {
-	color: #FF5C5C;
+	color:#FF5C5C;
 	align-self: flex-end;
 	padding-right: 15;
+	font-weight: bold;
 }
 
 .btn-login {
 	color: white;
-	background-color: #386363;
+	background-color: #FF5C5C;
 	border-radius: 15;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 #footer {
@@ -88,6 +95,7 @@ TextField {
 }
 
 .text-link {
-	color: #FF5C5C;
+	color:#FF5C5C;
 	font-size: 18px;
+	font-weight: bold;
 }

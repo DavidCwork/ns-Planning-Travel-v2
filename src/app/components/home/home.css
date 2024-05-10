@@ -21,8 +21,8 @@
 	background-color: #FF5C5C;
 	color: white;
 	border-radius: 15;
-	padding: 8 16 8 16;
-	font-size: 14;
+	padding: 4 8 4 8;
+	font-size: 10;
 }
 
 #icon-hotel{
@@ -97,7 +97,7 @@
 }
 .image-text-cont{
     left: 50;
-    top: 200;
+    top: 170;
     padding: 30px;
     background: rgba(0, 0, 0, 0.678);
     border-radius: 50px;
@@ -136,7 +136,7 @@
     align-items: center;
 }
 .imagen{
-    height: 950px;
+    height: 850px;
     margin: 20px;
     border-radius: 40%;
 }
