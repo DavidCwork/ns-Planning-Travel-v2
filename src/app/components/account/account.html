@@ -8,7 +8,7 @@
 		</FlexboxLayout>
 		<FlexboxLayout class="main">
 			<FlexboxLayout class="header">
-				<Label class="fas header__icon" text="&#xf060;"></Label>
+				<Label (tap)="onHome()" class="fas header__icon" text="&#xf060;"></Label>
 				<Label class="header__title" text="Perfil"></Label>
 			</FlexboxLayout>
 			<FlexboxLayout class="body">
@@ -29,7 +29,7 @@
 					<FlexboxLayout class="options">
 						<FlexboxLayout class="text-option">
 							<Label class="fas icon-left" text="&#xf013;"></Label>
-							<Label text="Preferencias"></Label>
+							<Label (tap)="onEditAccount()" text="Preferencias"></Label>
 						</FlexboxLayout>
 						<Label class="fas icon-right" text="&#xf054;"></Label>
 					</FlexboxLayout>

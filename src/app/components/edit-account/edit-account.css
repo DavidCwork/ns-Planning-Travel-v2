@@ -1,6 +1,14 @@
+
+#form{
+    flex-direction: column;
+    margin: 60px;
+    font-size: 20px;
+    
+}
 #label1{
     margin-left: 45px;
     font-weight:600;
+    
 }
 #label2{
     margin-bottom: 60px;
@@ -10,8 +18,11 @@
     background-color: #FF5C5C;
     color: white;
     border-radius: 15px;
-    margin-top: 50px;
-    font-weight: 400;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 12%;
+    width: 10px;
 }
 
 #titulo{
@@ -22,11 +33,11 @@
 TextField{
     border-width:1px;
     border-radius:15px;
-    height: 100px;
-    font-weight: 100;
+    font-weight: 50;
     background-color: white;
-    padding: 20px;
-
+    padding: 30px;
+    font-size: 15px;
+    border-radius: 12%;
 }
 Image{
     border-radius: 50%;
@@ -60,6 +71,7 @@ Image{
 #barra{
     background-color: white;
     height: 130px;
+    justify-content: center;
 }
 
 #boton4{

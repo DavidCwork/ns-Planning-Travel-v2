@@ -1,7 +1,6 @@
 <DockLayout stretchLastChild="false" id="main">
     <StackLayout  dock="top">
         <flexboxLayout id="nav-2">
-            <label id="btn-5" class="fas" text ='&#xf0c9;'></label>
             <label id="btn-6" class="fas" text ='&#xf0f3;'></label>
         </flexboxLayout>
     </StackLayout>
@@ -26,7 +25,7 @@
                 </flexboxLayout>
             </ScrollView>
             <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
-                <flexboxLayout>
+                <flexboxLayout (tap)="onDetails()">
                     <AbsoluteLayout class="image-scroll" position="relative" *ngFor="let hotel of hoteles">
                         <Image class="imagen" src="~/assets/hoteles.jpg"></Image>
                         <flexboxLayout class="image-text-cont" position="absolute" >

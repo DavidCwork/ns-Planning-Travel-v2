@@ -20,11 +20,16 @@ export class AccountComponent implements OnInit {
 		this.page.actionBarHidden = true;
 		this.obtenerTodos();
 	}
+    public onEditAccount(): void {
+        this.router.navigate(['edit-account']);
+    }
+
     public onHome(): void {
         this.router.navigate(['home']);
       }
 	tapNavigate() {
-		
+	
+        
 	}
 	public obtenerTodos(){
         this.apiService.getRegisters().subscribe((data: any[]) => {

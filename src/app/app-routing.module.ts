@@ -12,7 +12,7 @@ import { DetailsComponent } from './components/details/details';
 import { SearchComponent } from './components/search/search';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'details', pathMatch: 'full' },
+  { path: '', redirectTo: 'edit-account', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'hotels', loadChildren: () => import('./components/hotels/hotels.module').then((m) => m.HotelsModule) },

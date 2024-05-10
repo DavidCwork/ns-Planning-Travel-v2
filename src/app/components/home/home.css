@@ -5,7 +5,7 @@
     justify-content: center;
 }
 #nav-2{
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 60px;
 }
 #btn-1{
