@@ -2,45 +2,45 @@
     <AbsoluteLayout position="relative">
         <Image src="~/assets/hoteles.jpg" class="fondo" stretch="aspectFill" ></Image>
         <Label (tap)="onHotel()" class="fas header__icon" text="&#xf060;" position="absolute"></Label>
-    <flexboxlayout  position="absolute" class="detalles">
-        <flexboxlayout class="row">
-            <label class="titulo" text="Paris, Francia"></label>
-            <label class="precio" text="$1000"></label>
-        </flexboxlayout>
-        <flexboxlayout class="row">
-            <flexboxlayout>
-                <label class="fas estrella" text="&#xf005;"></label>
-                <label class="fas texto" text=" 4.9(2.7k)"></label>
+        <flexboxlayout  position="absolute" class="detalles">
+            <flexboxlayout class="row">
+                <label class="titulo" text="Paris, Francia"></label>
+                <label class="precio" text="$1000"></label>
             </flexboxlayout>
-            <label class="texto" text="Costo Estimado"></label>
-        </flexboxlayout>
-        <flexboxlayout class="row">
-            <label class="textoResaltado" text="Info"></label>
-            <label class="texto" text="Detalles"></label>
-            <label class="texto" text="Reseñas"></label>
-            <label class="texto" text="Costos"></label>
-        </flexboxlayout>
-        <flexboxlayout class="desc">
-            <label text="Paris possesses a rich and attractive cultural scene with shows, activities and festivals."></label>
-        </flexboxlayout>
-        <flexboxlayout class="row">
-            <flexboxlayout>
-                <label class="fas time" text="&#xf017;"></label>
-                <label text=" Duracion"></label>
+            <flexboxlayout class="row">
+                <flexboxlayout>
+                    <label class="fas estrella" text="&#xf005;"></label>
+                    <label class="fas texto" text=" 4.9(2.7k)"></label>
+                </flexboxlayout>
+                <label class="texto" text="Costo Estimado"></label>
             </flexboxlayout>
-            <flexboxlayout>
-                <label class="fas distancia" text="&#xf3c5;"></label>
-                <label text=" 6km"></label>
+            <flexboxlayout class="row">
+                <label class="textoResaltado" text="Info"></label>
+                <label class="texto" text="Detalles"></label>
+                <label class="texto" text="Reseñas"></label>
+                <label class="texto" text="Costos"></label>
+            </flexboxlayout>
+            <flexboxlayout class="desc">
+                <label text="Paris possesses a rich and attractive cultural scene with shows, activities and festivals."></label>
+            </flexboxlayout>
+            <flexboxlayout class="row">
+                <flexboxlayout>
+                    <label class="fas time" text="&#xf017;"></label>
+                    <label text=" 1h"></label>
+                </flexboxlayout>
+                <flexboxlayout>
+                    <label class="fas distancia" text="&#xf3c5;"></label>
+                    <label text=" 6km"></label>
+                </flexboxlayout>
+            </flexboxlayout>
+            <flexboxlayout class="row">
+                <label text="duracion"> </label>
+                <label text="distancia"></label>
+            </flexboxlayout>
+            <flexboxlayout class="row">
+                <button class="btn-contorno"> $ 1200 </button>
+                <button (tap)="onReserve()" class="boton"> Reservar </button>
             </flexboxlayout>
         </flexboxlayout>
-        <flexboxlayout class="row">
-            <label text="duracion"> </label>
-            <label text="distancia"></label>
-        </flexboxlayout>
-        <flexboxlayout class="row">
-            <button class="btn-contorno"> $ 1200 </button>
-            <button class="boton"> Reservar </button>
-        </flexboxlayout>
-    </flexboxlayout>
     </AbsoluteLayout>
 </ScrollView>

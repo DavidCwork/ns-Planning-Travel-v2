@@ -1,0 +1,48 @@
+<Scrollview orientation="vertical">
+    <DockLayout stretchLastChild="true">
+        <Label text="" dock="left" width="30" backgroundColor="#FFFFFF"> </Label>
+        <Label text="" dock="top" height="40" backgroundColor="#FFFFFF"> </Label>
+        <Label text="" dock="right" width="30" backgroundColor="#FFFFFF"> </Label>
+        <Label text="" dock="bottom" height="40" backgroundColor="#FFFFFF"> </Label>
+        <StackLayout backgroundColor="#ffffff">
+            <flexboxlayout id="head">
+                <Label (tap)="onDetails()" class="fas header__icon" text="&#xf053;"></Label>
+                <Label class="titulo" text="Reservar Hotel"> </Label>
+                <label class="fas icon_credit_card" text="&#Xf4b9;"> </label>
+            </flexboxlayout >
+                <flexboxlayout class="fecha">
+                    <Label  class="subtitulo" text="Fecha Inicio:"></Label>
+                    <DatePicker
+                        [(ngModel)]="selectedDate"
+                        [minDate]="minDate_init"    
+                        [maxDate]="maxDate_init"
+                        (dateChange)= "onInitDateChange($event)"
+                        />  
+                </flexboxlayout>
+                <flexboxlayout class="fecha">
+                    <Label  class="subtitulo" text="Fecha fin: "></Label>
+                    <DatePicker
+                        [(ngModel)]="selectedDate_end"
+                        [minDate]="minDate_end"
+                        [maxDate]="maxDate_end"
+                        (dateChange)="onEndDateChange($event)"
+                        />  
+                </flexboxlayout>
+                <button class="btn-dispo"> Ver disponibilidad </button>
+                <flexboxlayout>
+                    <label for=""> Cantidad de huespedes</label>
+                    <TextField> numero </TextField>
+                </flexboxlayout>
+                <flexboxlayout>
+                    <label for="">Elegir metodo de pago</label>
+                    <ListPicker items="{{ items }}" />
+                </flexboxlayout>
+                <label text="{{selectedDate}}"></label>
+                <label text="{{selectedDate_end}}"></label>
+            <flexboxlayout class="reservar">
+                <button class="btn-reservar"> Reservar </button>
+            </flexboxlayout>
+        
+        </StackLayout>      
+    </DockLayout>
+</Scrollview> 

@@ -16,4 +16,7 @@ export class DetailsComponent implements OnInit {
   public onHotel(): void {
     this.router.navigate(['hotels']);
   }
+  public onReserve(): void {
+    this.router.navigate(['reserve']);
+  }
 }
