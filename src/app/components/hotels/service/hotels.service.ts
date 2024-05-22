@@ -14,6 +14,14 @@ export class HotelsService {
     getHoteles(): Observable<any[]> {
       return this.http.get<any[]>(`${this.apiUrl}/hotel/`);
     }
+
+    getFoto(): Observable<any[]> {
+      return this.http.get<any[]>(`${this.apiUrl}/foto/`);
+    }
+
+    getHotelById(url): Observable<any> {
+      return this.http.get<any>(url);
+    }
   
     getRegisterById(id: number): Observable<any> {
       return this.http.get<any>(`${this.apiUrl}/hotel/${id}/`);

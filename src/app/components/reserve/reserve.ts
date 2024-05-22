@@ -35,7 +35,7 @@ export class ReserveComponent implements OnInit {
     this.maxDate_init = new Date(2030, 11, 31); 
 
     // Fecha fin
-    this.days.setDate(this.days.getDate() + 2);
+    this.days.setDate(this.days.getDate() + 1);
     this.selectedDate_end = new Date();
     this.minDate_end = this.days; 
     this.maxDate_end = new Date(2030, 11, 31); 
@@ -45,10 +45,10 @@ export class ReserveComponent implements OnInit {
   onInitDateChange(args: PropertyChangeData) {
     const picker = args.object as DatePicker;
     this.selectedDate = new Date(args.value);
-    this.days.setDate(this.selectedDate.getDate() + 2);
+    this.days.setDate(this.selectedDate.getDate() + 1);
   }
 
-  // captura fechafinal 
+  // captura fecha final 
   onEndDateChange(args: PropertyChangeData) {
     const picker = args.object as DatePicker;
     this.selectedDate_end = new Date(args.value);
@@ -57,6 +57,8 @@ export class ReserveComponent implements OnInit {
   public onDetails(): void {
     this.router.navigate(['details']);
   }
+
+  
 
   tapNavigate() {
   }

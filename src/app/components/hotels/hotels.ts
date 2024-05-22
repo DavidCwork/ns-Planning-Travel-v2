@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { Page } from '@nativescript/core';
-
+import { HotelsService } from './service/hotels.service'
+import { forkJoin } from 'rxjs';
 @Component({
   selector: 'hotels',
   templateUrl: './hotels.html',
@@ -9,35 +10,32 @@ import { Page } from '@nativescript/core';
 })
 export class HotelsComponent implements OnInit {
 
-  public hotels = [
-    {
-      img: 'https://lbcdn.airpaz.com/hotelimages/3745485/liebling-e079951c43a82d1a23acc1d67c63d4b1.jpg',
-      name: 'Hospedaje 1',
-      price: 100500,
-      rating: 5.0
-    },
-    {
-      img: 'https://lbcdn.airpaz.com/hotelimages/3745485/liebling-e079951c43a82d1a23acc1d67c63d4b1.jpg',
-      name: 'Hospedaje 2',
-      price: 200.000,
-      rating: 4.2
-    },
-    {
-      img: 'https://lbcdn.airpaz.com/hotelimages/3745485/liebling-e079951c43a82d1a23acc1d67c63d4b1.jpg',
-      name: 'Hospedaje 3',
-      price: 300,
-      rating: 3.5
-    },
-    {
-      img: 'https://lbcdn.airpaz.com/hotelimages/3745485/liebling-e079951c43a82d1a23acc1d67c63d4b1.jpg',
-      name: 'Hospedaje 3',
-      price: 300,
-      rating: 3.5
-    }
-  ]
-  public constructor(private router: Router, private page: Page) { }
+  public hotels = []
+  fotos = []
+  public constructor(private router: Router, private page: Page, private hotelsService: HotelsService) { }
 
   ngOnInit() {
+    forkJoin({
+      hotels: this.hotelsService.getHoteles(),
+      fotos: this.hotelsService.getFoto()
+    }).subscribe(({ hotels, fotos }) => {
+      this.hotels = hotels.map(hotel => {
+        
+        return hotel;
+      });
+      this.fotos = fotos;
+      this.fotos.forEach(foto => {
+        const hotel = {}
+        this.hotelsService.getHotelById(foto.id_hotel).subscribe(h => {
+          h = hotel
+          const fotoHotel = this.hotels.find(h => h.id === hotel.id);
+          if(fotoHotel) {
+            fotoHotel.img = foto.url_foto;
+          }
+          console.log(fotoHotel);
+        });
+      });
+    });
     this.page.actionBarHidden = true;
   }
 
