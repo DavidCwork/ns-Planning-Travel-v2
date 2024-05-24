@@ -4,6 +4,7 @@ import { Routes } from '@angular/router';
 
 import { HotelsComponent } from './hotels';
 import { CardHotelComponent } from './components/card-hotel/card-hotel';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: HotelsComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   imports: [
     NativeScriptCommonModule,
     NativeScriptRouterModule.forChild(routes),
+    HttpClientModule
   ],
   exports: [],
   declarations: [

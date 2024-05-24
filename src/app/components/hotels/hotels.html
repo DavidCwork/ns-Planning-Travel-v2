@@ -25,10 +25,10 @@
         <FlexboxLayout (tap)="onDetails()" class="hotels">
             <card-hotel
                 *ngFor="let hotel of hotels"
-                [hotelImg]="hotel.img"
+                [hotelImg]="hotel.fotos[0]"
                 [hotelName]="hotel.nombre"
                 [hotelPrice]="hotel.precio"
-                [hotelRating]="hotel.rating"
+                [hotelRating]="hotel.promedio_valoracion"
             ></card-hotel>
         </FlexboxLayout>
     </StackLayout>

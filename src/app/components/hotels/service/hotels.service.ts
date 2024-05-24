@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
   })
 export class HotelsService {
-    apiUrl = 'http://10.171.68.201:8000/planning_travel/api/1.0';
+    apiUrl = 'http://192.168.1.6:8000/planning_travel/api/1.0';
 
-    constructor(private http: HttpClient) { }
-  
+    constructor(private http: HttpClient) {}
+
     getHoteles(): Observable<any[]> {
-      return this.http.get<any[]>(`${this.apiUrl}/hotel/`);
+      return this.http.get<any[]>(`${this.apiUrl}/iniciohoteles/`);
     }
 
     getFoto(): Observable<any[]> {
@@ -22,19 +22,19 @@ export class HotelsService {
     getHotelById(url): Observable<any> {
       return this.http.get<any>(url);
     }
-  
+
     getRegisterById(id: number): Observable<any> {
       return this.http.get<any>(`${this.apiUrl}/hotel/${id}/`);
     }
-  
+
     addRegister(post: any): Observable<any> {
       return this.http.post<any>(`${this.apiUrl}/hotel`, post);
     }
-  
+
     updateRegister(id: number, post: any): Observable<any> {
       return this.http.put<any>(`${this.apiUrl}/hotel/${id}/`, post);
     }
-  
+
     deleteRegister(id: number): Observable<any> {
       return this.http.delete<any>(`${this.apiUrl}/hotel/${id}/`);
     }

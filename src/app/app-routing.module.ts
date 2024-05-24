@@ -30,6 +30,5 @@ const routes: Routes = [
     NativeScriptRouterModule.forRoot(routes),
     HttpClientModule],
   exports: [NativeScriptRouterModule],
- 
 })
 export class AppRoutingModule {}

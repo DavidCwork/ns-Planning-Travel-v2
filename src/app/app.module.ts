@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core'
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core'
 import { NativeScriptModule } from '@nativescript/angular'
 
 import { AppRoutingModule } from './app-routing.module'
@@ -10,6 +10,7 @@ import { AccountComponent } from './components/account/account'
 import { EditAccountComponent } from './components/edit-account/edit-account';
 import { HomeComponent } from './components/home/home';
 import { DetailsComponent } from './components/details/details';
+import { SearchComponent } from './components/search/search';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -25,7 +26,8 @@ import { DetailsComponent } from './components/details/details';
     AccountComponent,
     EditAccountComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    SearchComponent
   ],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
