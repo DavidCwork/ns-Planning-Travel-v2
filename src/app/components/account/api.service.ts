@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  apiUrl = 'http://10.171.68.201:8000/planning_travel/api/1.0';
+  apiUrl = 'http://192.168.56.1:8000/planning_travel/api/1.0';
 
   constructor(private http: HttpClient) { }
 

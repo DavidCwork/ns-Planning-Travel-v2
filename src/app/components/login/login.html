@@ -9,15 +9,27 @@
 			<Label class="header-items" text="O" ></Label>
 		</FlexboxLayout>
 		<FlexboxLayout id="form">
-			<TextField required hint="Correo Electronico"></TextField>
+			<TextField
+				required
+				hint="Nick"
+				(textChange)="inputChange($event, 'nick')"
+			></TextField>
 			<GridLayout rows="auto, auto" columns="*, auto" class="input-password">
-				<TextField #passwordField row="0" secure="true" colSpan="2" required hint="Contraseña" (loaded)="textFieldLoaded($event)"></TextField>
+				<TextField
+					#passwordField
+					row="0"
+					secure="true"
+					colSpan="2"
+					required
+					hint="Contraseña"
+					(loaded)="textFieldLoaded($event)"
+					(textChange)="inputChange($event, 'password')"></TextField>
 				<Label (tap)="togglePasswordVisibility()" class="fas" row="0" col="1" text="&#xf070;" [visibility]="passwordVisible ? 'visible' : 'collapse'"></Label>
 				<Label (tap)="togglePasswordVisibility()" class="fas" row="0" col="1" text="&#xf06e;" [visibility]="!passwordVisible ? 'visible' : 'collapse'"></Label>
 			</GridLayout>
 			<!-- <TextField required hint="Contraseña"></TextField> -->
 			<Label id="link-password" text="¿Olvidaste tu contraseña?"></Label>
-			<Button (tap)="onHotels()" class="btn-login" text="Iniciar sesión"></Button>
+			<Button (tap)="loguear()" class="btn-login" text="Iniciar sesión"></Button>
 		</FlexboxLayout>
 		<FlexboxLayout id="footer">
 			<Label text="¿No tienes una cuenta?"></Label>

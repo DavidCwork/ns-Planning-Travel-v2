@@ -4,13 +4,13 @@
         <Label (tap)="onHotel()" class="fas header__icon" text="&#xf060;" position="absolute"></Label>
         <flexboxlayout  position="absolute" class="detalles">
             <flexboxlayout class="row">
-                <label class="titulo" text="Paris, Francia"></label>
-                <label class="precio" text="$1000"></label>
+                <label class="titulo" text="{{ hotel.nombre }}"></label>
+                <label class="precio" text="{{ hotel.precio }}"></label>
             </flexboxlayout>
             <flexboxlayout class="row">
                 <flexboxlayout>
                     <label class="fas estrella" text="&#xf005;"></label>
-                    <label class="fas texto" text=" 4.9(2.7k)"></label>
+                    <label class="fas texto" text=" {{ hotel.promedio }}({{ hotel.num_opiniones }})"></label>
                 </flexboxlayout>
                 <label class="texto" text="Costo Estimado"></label>
             </flexboxlayout>
@@ -21,7 +21,7 @@
                 <label class="texto" text="Costos"></label>
             </flexboxlayout>
             <flexboxlayout class="desc">
-                <label text="Paris possesses a rich and attractive cultural scene with shows, activities and festivals."></label>
+                <label text="Hotel de la ciudad {{ hotel.ciudad }}"></label>
             </flexboxlayout>
             <flexboxlayout class="row">
                 <flexboxlayout>
@@ -30,12 +30,12 @@
                 </flexboxlayout>
                 <flexboxlayout>
                     <label class="fas distancia" text="&#xf3c5;"></label>
-                    <label text=" 6km"></label>
+                    <label text=" {{ hotel.direccion }}"></label>
                 </flexboxlayout>
             </flexboxlayout>
             <flexboxlayout class="row">
                 <label text="duracion"> </label>
-                <label text="distancia"></label>
+                <label text="Direccion"></label>
             </flexboxlayout>
             <flexboxlayout class="row">
                 <button class="btn-contorno"> $ 1200 </button>

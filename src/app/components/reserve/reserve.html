@@ -14,10 +14,10 @@
                     <Label  class="subtitulo" text="Fecha Inicio:"></Label>
                     <DatePicker
                         [(ngModel)]="selectedDate"
-                        [minDate]="minDate_init"    
+                        [minDate]="minDate_init"
                         [maxDate]="maxDate_init"
                         (dateChange)= "onInitDateChange($event)"
-                        />  
+                        />
                 </flexboxlayout>
                 <flexboxlayout class="fecha">
                     <Label  class="subtitulo" text="Fecha fin: "></Label>
@@ -26,22 +26,21 @@
                         [minDate]="minDate_end"
                         [maxDate]="maxDate_end"
                         (dateChange)="onEndDateChange($event)"
-                        />  
+                        />
                 </flexboxlayout>
-                <button  class="btn-dispo"> Ver disponibilidad </button>
+                <button (tap)="verificarHabitacionesDisponibles()"  class="btn-dispo"> Ver disponibilidad </button>
                 <flexboxlayout>
                     <label for=""> Cantidad de huespedes</label>
-                    <TextField> numero </TextField>
+                    <TextField
+                        hint="0"
+                        (textChange)="inputChange($event)"
+                    ></TextField>
                 </flexboxlayout>
-                <flexboxlayout>
-                    <label for="">Elegir metodo de pago</label>
-                    <ListPicker items="{{ items }}" />
-                </flexboxlayout>
-              
+
             <flexboxlayout class="reservar">
-                <button class="btn-reservar"> Reservar </button>
+                <button class="btn-reservar" (tap)="hacerReserva()" [disabled]="habitacionesDisponibles === []"> Reservar </button>
             </flexboxlayout>
-        
-        </StackLayout>      
+
+        </StackLayout>
     </DockLayout>
-</Scrollview> 
+</Scrollview>

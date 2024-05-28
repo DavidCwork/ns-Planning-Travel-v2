@@ -1,0 +1,73 @@
+.nav-bar {
+	height: 86;
+	justify-content: center;
+	align-items: center;
+}
+
+#icon-home {
+	background-color: #386363;
+	color: white;
+	border-radius: 15;
+	padding: 8 16 8 16;
+	font-size: 14;
+}
+
+.nav-bar__icons {
+	height: 36;
+	margin-right: 30;
+	color: #386363;
+	font-size: 20;
+	font-weight: bold;
+}
+
+.nav-bar__icons-active {
+	color: #FF5C5C;
+}
+
+.main {
+	flex-direction: column;
+	padding: 20;
+	background-color: #F3F5F6;
+}
+
+.header {
+	flex-direction: row;
+	font-family: 'Poppins';
+	font-weight: normal;
+}
+
+.header__icon {
+	font-size: 16;
+	font-weight: normal;
+	background-color: white;
+	border-radius: 50;
+	width: 30;
+	height: 30;
+	text-align: center;
+	margin: 0 30 0 0;
+}
+
+.header__title {
+	font-weight: bold;
+	font-size: 22;
+}
+
+.body {
+    justify-content: center;
+    align-items: center;
+    margin: 25 0 0 0;
+}
+
+.texto-info {
+    justify-content: center;
+    align-items: center;
+    font-size: 24;
+    font-weight: 700;
+}
+
+.reserva {
+    width: 100%;
+    background-color: #dfdfdf;
+    margin: 4 0;
+    padding: 2 6;
+}

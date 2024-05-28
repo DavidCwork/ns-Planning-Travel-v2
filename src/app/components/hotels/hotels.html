@@ -22,13 +22,14 @@
                 <Label text=" Mapa"></Label>
             </FlexboxLayout>
         </FlexboxLayout>
-        <FlexboxLayout (tap)="onDetails()" class="hotels">
+        <FlexboxLayout class="hotels">
             <card-hotel
                 *ngFor="let hotel of hotels"
                 [hotelImg]="hotel.fotos[0]"
                 [hotelName]="hotel.nombre"
                 [hotelPrice]="hotel.precio"
                 [hotelRating]="hotel.promedio_valoracion"
+                (tapEvent)="onDetails(hotel.id)"
             ></card-hotel>
         </FlexboxLayout>
     </StackLayout>

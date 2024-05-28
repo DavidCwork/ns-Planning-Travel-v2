@@ -9,8 +9,21 @@
 			<Label text="O"></Label>
 		</FlexboxLayout>
 		<FlexboxLayout id="form">
-			<TextField required hint="Nombre y Apellidos"></TextField>
-			<TextField required hint="Correo Electronico"></TextField>
+			<TextField
+				required
+				hint="Nombre"
+				(textChange)="inputChange($event, 'nombre')"
+			></TextField>
+			<TextField
+				required
+				hint="Apellidos"
+				(textChange)="inputChange($event, 'apellido')"
+			></TextField>
+			<TextField
+				required
+				hint="Correo Electronico"
+				(textChange)="inputChange($event, 'correo')"
+			></TextField>
 			<GridLayout rows="auto, auto" columns="*, auto" class="input-password">
 				<TextField
 					row="0"
@@ -19,6 +32,7 @@
 					required
 					hint="Contraseña"
 					(loaded)="textFieldLoaded($event, 'password')"
+					(textChange)="inputChange($event, 'password')"
 					#passwordField
 				></TextField>
 				<Label
@@ -46,6 +60,7 @@
 					required
 					hint="Confirmar contraseña"
 					(loaded)="textFieldLoaded($event, 'confirmPassword')"
+					(textChange)="inputChange($event, 'confirmPassword')"
 					#confirmPasswordField
 				></TextField>
 				<Label
@@ -67,7 +82,7 @@
 					[visibility]="!showConfirmPasswordIcon ? 'visible' : 'collapse'"
 				></Label>
 			</GridLayout>
-			<Button class="btn-register" text="Registrarse"></Button>
+			<Button class="btn-register" text="Registrarse" (tap)="registrarse()"></Button>
 		</FlexboxLayout>
 		<FlexboxLayout id="footer">
 			<Label text="¿Ya tienes una cuenta?"></Label>

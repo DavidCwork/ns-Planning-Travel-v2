@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card-hotel',
@@ -11,8 +12,13 @@ export class CardHotelComponent implements OnInit {
   @Input() hotelName: string;
   @Input() hotelPrice: number;
   @Input() hotelRating: number;
+  @Output() tapEvent: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
+
+  onTap() {
+    this.tapEvent.emit();
+  }
 }

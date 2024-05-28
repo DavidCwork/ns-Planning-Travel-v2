@@ -15,8 +15,9 @@ export class HotelsComponent implements OnInit {
 
   ngOnInit() {
     this.hotelsService.getHoteles().subscribe(data => {
-      this.hotels = data.hoteles
-    })
+      this.hotels = data.hoteles;
+      console.log(data);
+    });
     this.page.actionBarHidden = true;
   }
 
@@ -26,7 +27,8 @@ export class HotelsComponent implements OnInit {
   public onSearch(): void {
     this.router.navigate(['search']);
   }
-  public onDetails(): void {
-    this.router.navigate(['details']);
+  public onDetails(id: number): void {
+    console.log(`click ${id}`);
+    this.router.navigate(['details', id]);
   }
 }

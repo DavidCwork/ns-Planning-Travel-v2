@@ -2,9 +2,9 @@
 	<DockLayout stretchLastChild="true">
 		<FlexboxLayout dock="bottom" class="nav-bar">
 			<Label (tap)="onHome()" class="fas nav-bar__icons" id="icon-home" text="&#xf015; Home"></Label>
-			<Label class="fas nav-bar__icons" text="&#xf594;"></Label>
-			<Label class="fas nav-bar__icons" text="&#xf002;"></Label>
-			<Label class="fas nav-bar__icons nav-bar__icons-active" text="&#xf007;"></Label>
+			<Label (tap)="onHotel()" class="fas nav-bar__icons" text="&#xf594;"></Label>
+			<Label (tap)="onSearch()" class="fas nav-bar__icons" text="&#xf002;"></Label>
+			<Label (tap)="onAccount()" class="fas nav-bar__icons nav-bar__icons-active" text="&#xf007;"></Label>
 		</FlexboxLayout>
 		<FlexboxLayout class="main">
 			<FlexboxLayout class="header">
@@ -18,8 +18,8 @@
 						<Label class="circle-active"></Label>
 					</AbsoluteLayout>
 					<FlexboxLayout class="profile-info">
-						<Label class="profile-name">Sebastian</Label>
-						<Label class="profile-id">ID: 56456941</Label>
+						<Label class="profile-name">{{ usuario.nombre }}</Label>
+						<Label class="profile-id">{{ usuario.rol }}</Label>
 					</FlexboxLayout>
 					<FlexboxLayout class="btn-message">
 						<Label class="far" text="&#xf27a;"></Label>
@@ -43,7 +43,20 @@
 						</FlexboxLayout>
 						<Label class="fas icon-right" text="&#xf054;"></Label>
 					</FlexboxLayout>
-					
+					<FlexboxLayout class="options">
+						<FlexboxLayout class="text-option">
+							<Label class="fas icon-left" text="&#xf274;"></Label>
+							<Label (tap)="onReservas()" text="Reservas"></Label>
+						</FlexboxLayout>
+						<Label class="fas icon-right" text="&#xf054;"></Label>
+					</FlexboxLayout>
+					<FlexboxLayout class="options">
+						<FlexboxLayout class="text-option">
+							<Label class="fas icon-left" text="&#xf2f5;"></Label>
+							<Label (tap)="cerrarSesion()" text="Cerrar Sesión"></Label>
+						</FlexboxLayout>
+						<Label class="fas icon-right" text="&#xf054;"></Label>
+					</FlexboxLayout>
 				</FlexboxLayout>
 			</FlexboxLayout>
 			<StackLayout style="padding-top: 30em;">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { Page, TextField } from '@nativescript/core';
+import { Dialogs, Page, TextField } from '@nativescript/core';
+import { ApiService } from '~/app/service/api.service';
 
 @Component({
   selector: 'register',
@@ -13,8 +14,13 @@ export class RegisterComponent implements OnInit {
   showConfirmPasswordIcon: boolean = true;
   passwordField: TextField;
   confirmPasswordField: TextField;
+  nombre = '';
+  apellido = '';
+  correo = '';
+  password = '';
+  confirmPassword = '';
 
-  public constructor(private router: Router, private page: Page) { }
+  public constructor(private router: Router, private page: Page, private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.page.actionBarHidden = true;
@@ -22,6 +28,52 @@ export class RegisterComponent implements OnInit {
 
   public onLogin(): void{
     this.router.navigate(["login"]);
+  }
+
+  registrarse() {
+    console.log(`${this.nombre, this.apellido, this.correo, this.password, this.confirmPassword}`);
+    const data = {
+      nombre: this.nombre,
+      apellido: this.apellido,
+      correo: this.correo,
+      password: this.password,
+      confirmPassword: this.confirmPassword
+    }
+    this.apiService.registrarse(data).subscribe((res) => {
+      console.log(res.respuesta);
+      if(res.respuesta < 204) {
+        Dialogs.alert({
+          title: 'Info',
+          message: `${res.message}`,
+          okButtonText: 'OK',
+          cancelable: true
+        });
+        this.router.navigate(['login']);
+      } else {
+        Dialogs.alert({
+          title: 'Info',
+          message: `${res.message}`,
+          okButtonText: 'OK',
+          cancelable: true
+        });
+      }
+    }, error => {
+      if(error.status === 404) {
+        Dialogs.alert({
+          title: 'Alerta',
+          message: 'Usuario o contraseña incorrectos',
+          okButtonText: 'OK',
+          cancelable: true
+        });
+      } else {
+        Dialogs.alert({
+          title: 'Respuesta',
+          message: error.error.message,
+          okButtonText: 'OK',
+          cancelable: true
+        });
+      }
+    });
   }
 
   public togglePasswordVisibility(field: string): void {
@@ -32,13 +84,35 @@ export class RegisterComponent implements OnInit {
         this.showConfirmPasswordIcon = !this.showConfirmPasswordIcon;
         this.confirmPasswordField.secure = !this.confirmPasswordField.secure;
     }
-}
+  }
 
-textFieldLoaded(args, field: string): void {
+  textFieldLoaded(args, field: string): void {
     if (field === 'password') {
         this.passwordField = args.object;
     } else if (field === 'confirmPassword') {
         this.confirmPasswordField = args.object;
     }
-}
+  }
+
+  inputChange(args, campo) {
+    let textField = <UITextField>args.object;
+    const options = {
+      'nombre': () => {
+        this.nombre = textField.text;
+      },
+      'apellido': () => {
+        this.apellido = textField.text;
+      },
+      'correo': () => {
+        this.correo = textField.text;
+      },
+      'password': () => {
+        this.password = textField.text;
+      },
+      'confirmPassword': () => {
+        this.confirmPassword = textField.text;
+      }
+    }
+    return options[campo]();
+  }
 }

@@ -1,0 +1,32 @@
+<ScrollView>
+	<DockLayout stretchLastChild="true">
+		<FlexboxLayout dock="bottom" class="nav-bar">
+			<Label (tap)="onHome()" class="fas nav-bar__icons" id="icon-home" text="&#xf015; Home"></Label>
+			<Label (tap)="onHotel()" class="fas nav-bar__icons" text="&#xf594;"></Label>
+			<Label (tap)="onSearch()" class="fas nav-bar__icons" text="&#xf002;"></Label>
+			<Label (tap)="onAccount()" class="fas nav-bar__icons nav-bar__icons-active" text="&#xf007;"></Label>
+		</FlexboxLayout>
+		<FlexboxLayout flexDirection="column" class="main">
+			<FlexboxLayout class="header">
+				<Label (tap)="onAccount()" class="fas header__icon" text="&#xf060;"></Label>
+				<Label class="header__title" text="Reservas {{ usuario.nombre }}"></Label>
+			</FlexboxLayout>
+			<FlexboxLayout class="body" flexDirection="column">
+				<FlexboxLayout *ngIf="noHayReserva; else hayReservas" class="texto-info">
+					<Label text="No tienes reservas aun"></Label>
+				</FlexboxLayout>
+				<ng-template #hayReservas>
+					<FlexboxLayout flexDirection="column" *ngFor="let reserva of reservas" class="reserva">
+						<Label text="Habitacion: {{ reserva.reserva.habitacion }}"></Label>
+						<Label text="Fecha de llegada: {{ reserva.reserva.fecha_llegada | date }}"></Label>
+						<Label text="Fecha de salida: {{ reserva.reserva.fecha_salida | date }}"></Label>
+						<Label text="Cantidad de huespedes: {{ reserva.reserva.num_huespedes }}"></Label>
+						<Label text="Valor: {{ reserva.reserva.precio }}"></Label>
+					</FlexboxLayout>
+				</ng-template>
+			</FlexboxLayout>
+		</FlexboxLayout>
+	</DockLayout>
+</ScrollView>
+
+
