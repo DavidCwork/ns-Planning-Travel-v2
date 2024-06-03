@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { Dialogs, Page, TextField } from '@nativescript/core';
+import { openUrl } from '@nativescript/core/utils';
 import { ApiService } from '~/app/service/api.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { ApiService } from '~/app/service/api.service';
 })
 
 export class RegisterComponent implements OnInit {
+  isAcceptTermin: boolean = false;
   showPasswordIcon: boolean = true;
   showConfirmPasswordIcon: boolean = true;
   passwordField: TextField;
@@ -30,7 +32,21 @@ export class RegisterComponent implements OnInit {
     this.router.navigate(["login"]);
   }
 
+  onSwitchChange(args) {
+    this.isAcceptTermin = args.value;
+    console.log('Switch value:', this.isAcceptTermin);
+  }
+
   registrarse() {
+    if(!this.isAcceptTermin) {
+      Dialogs.alert({
+        title: 'Info',
+        message: `Tienes que aceptar los Términos y Condiciones.`,
+        okButtonText: 'OK',
+        cancelable: true
+      });
+      return;
+    }
     console.log(`${this.nombre, this.apellido, this.correo, this.password, this.confirmPassword}`);
     const data = {
       nombre: this.nombre,
@@ -114,5 +130,9 @@ export class RegisterComponent implements OnInit {
       }
     }
     return options[campo]();
+  }
+
+  abrirTyC(): void {
+    openUrl('https://andresm94.pythonanywhere.com/terminos_condiciones/');
   }
 }

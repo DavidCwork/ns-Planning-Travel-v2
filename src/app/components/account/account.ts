@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { Page, Dialogs } from '@nativescript/core';
 import { ApiService } from './api.service';
 import { ItemEventData } from "@nativescript/core/ui/list-view";
+import { User } from '../../interfaces/user.interface'
 
 @Component({
   selector: 'account',
@@ -10,18 +11,23 @@ import { ItemEventData } from "@nativescript/core/ui/list-view";
   styleUrls: ['./account.css'],
 })
 export class AccountComponent implements OnInit {
-
-	usuario: any[];
+  token;
+	usuario: User;
 
 	public constructor(private router: Router,private page: Page, private apiService: ApiService) {}
 
 	ngOnInit(): void {
 		this.page.actionBarHidden = true;
 		this.obtenerTodos();
+    this.obtenerToken();
 	}
 
   public onEditAccount(): void {
       this.router.navigate(['edit-account']);
+  }
+
+  obtenerToken() {
+    this.token = localStorage.getItem('planning.token');
   }
 
   public onHome(): void {
@@ -64,6 +70,18 @@ export class AccountComponent implements OnInit {
 
   onReservas() {
     this.router.navigate(['reserva'])
+  }
+
+  eliminarCuenta() {
+    this.apiService.deleteRegister(this.usuario.user_id, this.token).subscribe((res) => {
+      Dialogs.alert({
+        title: 'Detalles!',
+        message: `Tu cuenta a sido eliminada correctamente`,
+        okButtonText: 'OK',
+        cancelable: true,
+      });
+      this.cerrarSesion();
+    });
   }
 
   cerrarSesion() {

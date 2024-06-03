@@ -82,6 +82,16 @@
 					[visibility]="!showConfirmPasswordIcon ? 'visible' : 'collapse'"
 				></Label>
 			</GridLayout>
+			<Flexboxlayout>
+				<Switch
+					color="#BFCDAC"
+					backgroundColor="green"
+					offBackgroundColor="#DC493D"
+					[(ngModel)]="isAcceptTermin"
+					(checkedChange)="onSwitchChange($event)"
+				></Switch>
+				<Label (tap)="abrirTyC()" text="Aceptar Términos y Condiciones"></Label>
+			</Flexboxlayout>
 			<Button class="btn-register" text="Registrarse" (tap)="registrarse()"></Button>
 		</FlexboxLayout>
 		<FlexboxLayout id="footer">

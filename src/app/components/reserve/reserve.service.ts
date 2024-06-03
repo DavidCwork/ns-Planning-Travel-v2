@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
   })
 export class ReserveService {
-    apiUrl = 'http://192.168.56.1:8000/planning_travel/api/1.0';
+    apiUrl = 'https://andresm94.pythonanywhere.com/api/1.0';
 
     constructor(private http: HttpClient) { }
 

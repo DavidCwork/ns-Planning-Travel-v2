@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
@@ -8,8 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
-  apiUrl = 'http://192.168.56.1:8000/planning_travel/api/1.0';
+  apiUrl = 'https://andresm94.pythonanywhere.com/api/1.0';
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +28,10 @@ export class ApiService {
     return this.http.put<any>(`${this.apiUrl}/usuario/${id}/`, post);
   }
 
-  deleteRegister(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/usuario/${id}/`);
+  deleteRegister(id: number, token): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Token ${token}`
+    });
+    return this.http.delete<any>(`${this.apiUrl}/borrar_usuario/${id}/`, { headers });
   }
 }
